@@ -15,19 +15,18 @@ var log = Alloy.Globals.log;
 var args = arguments[0] || {};
 var id = args.id;
 
-/*
+
 var todo = Alloy.Collections.ToDo;
 var todoJSON = todo.toJSON();
-var todoItem = todo.findWhere({
-    name: itemId
-});
+//var todoItem = todo.findWhere({ name: itemId });
+var todoItem = _.first(todo.where({ name: itemId }));
 
 log.info('[TodoDetail] : Opened Item', todoItem);
 
 var moment = require('moment');
 var galleryExists = false;
 
-//init();
+init();
 
 /**
  * Start the controller running
@@ -35,12 +34,12 @@ var galleryExists = false;
  * @return
  */
 function init() {
-    //setupNav();
-    //addEventListeners();
+    setupNav();
+    addEventListeners();
 
     $.labelTitle.text = todoItem.get('name').toUpperCase();
 
-    /*
+
     if (isDone()) {
         log.debug('[TodoDetail] : Initializing : Completed');
         $.viewDone.height = 44;
@@ -66,7 +65,10 @@ function init() {
         createGallery();
         galleryExists = true;
     }
-    */
+
+    // @TODO Figure out why this is needed.  The nav widget should handle it
+    $.windowTodoDetail.open();
+
 }
 
 /**
@@ -86,7 +88,7 @@ function setupNav() {
  * @return
  */
 function addEventListeners() {
-    /*
+
     // Mark as Done
     $.viewDone.addEventListener('click', done);
 
@@ -95,7 +97,7 @@ function addEventListeners() {
 
     // Capture a photo
     $.viewPhoto.addEventListener('click', captureImage);
-    */
+
 }
 
 /**
@@ -266,7 +268,8 @@ function setReminder() {
                 if (e.index == 0) {
                     saveDate(d.dateValue);
                 } else {
-                    Alloy.Globals.toast.show("Reminder cancelled");
+                    //Alloy.Globals.toast.show("Reminder cancelled");
+                    alert("Reminder cancelled");
                 }
 
                 $.viewMain.remove(calendarView);
@@ -295,7 +298,8 @@ function saveDate(d) {
     todoItem.set({ reminderDateTime: d });
     todoItem.save();
 
-    Alloy.Globals.toast.show("Reminder set!");
+    //Alloy.Globals.toast.show("Reminder set!");
+    alert("Reminder set!");
 }
 
 /**

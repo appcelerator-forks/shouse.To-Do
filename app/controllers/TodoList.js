@@ -24,7 +24,7 @@ addEventListeners();
  * @return
  */
 function init() {
-    log.debug()
+    //log.debug();
     setupNav();
 
     log.debug('[TodoList] : Initializing');

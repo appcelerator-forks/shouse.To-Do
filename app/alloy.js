@@ -17,6 +17,13 @@ log.init();
 
 Alloy.Globals.log = log;
 
+// Logger Add exception handling - 'Red Screen of Death'
+var Logger = require("yy.logcatcher");
+var exceptions = require('logging/exceptions');
+Logger.addEventListener('error', function(e) {
+    exceptions.parseException(e);
+});
+
 // Let's create a random color scheme for the app based on Propellics base colors
 // @link http://www.colorcombos.com/combotester.html?rnd=0&color0=172800&color1=1a1c20&color2=604800&color3=cccccc&color4=373c45&color5=eb5d36&color6=f0f0f0&color7=fb734e&color8=ffffff&color9=e1e1e1&color10=bfbfbf
 Alloy.Globals.Colors = [

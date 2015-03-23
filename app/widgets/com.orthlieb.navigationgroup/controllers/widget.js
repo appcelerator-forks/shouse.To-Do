@@ -1,9 +1,11 @@
 // Originally derived from example code from Appcelerator developer relations.
 $.windowStack = [];
 
-// Method: open Add a new window to the Navigation Group
-// @param windowToOpen {TiUIWindow} Window to open within the nav group.
-// @param [options] {openWindowParams} Options to apply while opening. See http://docs.appcelerator.com/titanium/latest/#!/api/openWindowParams.
+/**
+ * Method: open Add a new window to the Navigation Group
+ * @param windowToOpen {TiUIWindow} Window to open within the nav group.
+ * @param [options] {openWindowParams} Options to apply while opening. See http://docs.appcelerator.com/titanium/latest/#!/api/openWindowParams.
+ */
 exports.open = function (windowToOpen, options) {
     // Add the window to the stack of windows managed by the controller
     $.windowStack.push(windowToOpen);

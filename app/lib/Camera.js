@@ -109,38 +109,6 @@ exports.compressVideo = function (pathToVideoFile) {
     });
 };
 
-
-
-
-
-/**
- * This is the controller file for "VideoImageRecorder"
- *
- * @class Controller.MaintainDetail
- * @author Steven House
- * @email steven.m.house@gmail.com
- */
-
-var args = arguments[0] || {};
-var itemId = args.itemId || "";
-
-// Include logging utility
-var log = Alloy.Globals.log;
-log.info('[VideoRecorder] : Opened Item', maintenanceItem);
-
-//var galleryExists = false;
-
-init();
-
-/**
- * Start the controller running
- * @method init
- * @return
- */
-function init() {
-    // Initialization stuff
-}
-
 /**
  * This invokes the camera
  * @method captureImage
@@ -190,7 +158,7 @@ function save(image) {
         log.debug('[VideoRecorder] : captureImage : Camera Success, image = ', image);
 
         // This part should be skipped to the existing function
-        var imageDir = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'maintain');
+        var imageDir = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'todo');
         if (!imageDir.exists()) {
             imageDir.createDirectory();
         }
