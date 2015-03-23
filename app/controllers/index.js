@@ -68,10 +68,11 @@ function init() {
 
     // Let's open our ToDo List controller
     var todo = Alloy.createController('TodoList').getView();
-    $.navWindow.open(todo);
+    //$.navWindow.open(todo);
 
+    Alloy.Globals.Menu.setMainContent('TodoList');
     // Give it access globally
-    Alloy.Globals.navWindow = $.navWindow;
+    //Alloy.Globals.navWindow = $.navWindow;
 }
 
 /**

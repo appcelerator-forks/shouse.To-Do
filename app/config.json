@@ -18,6 +18,8 @@
   "os:ios": {},
   "os:mobileweb": {},
   "dependencies": {
+    "com.sivci.logger": "1.0",
+    "sh.slideMenuAndNavbar": "0.5",
     "com.orthlieb.navigationgroup": "1.0",
     "com.alcoapps.socialshare": "1.0",
     "nl.fokkezb.form": "1.6.1",

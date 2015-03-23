@@ -51,8 +51,6 @@
 	<modules>
     <module platform="android" version="0.2">ti.sq</module>
     <module platform="iphone" version="0.4">ti.sq</module>
-    <module platform="android">yy.logcatcher</module>
-    <module platform="iphone">yy.logcatcher</module>
   </modules>
 	<deployment-targets>
 		<target device="android">true</target>

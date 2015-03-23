@@ -18,8 +18,12 @@ var id = args.id;
 
 var todo = Alloy.Collections.ToDo;
 var todoJSON = todo.toJSON();
+var todoItem = _.first(_.where(todoJSON, {name: itemId}));
+todoItem = JSON.parse(todoJSON);
 //var todoItem = todo.findWhere({ name: itemId });
-var todoItem = _.first(todo.where({ name: itemId }));
+//var todoItem = _.first(todo.where({ name: itemId }));
+//var todoItemJSON = todoItem.toJSON();
+
 
 log.info('[TodoDetail] : Opened Item', todoItem);
 
@@ -37,9 +41,13 @@ function init() {
     setupNav();
     addEventListeners();
 
-    $.labelTitle.text = todoItem.get('name').toUpperCase();
+    //alert(todoItem.name);
+    var name = todoItem.name;
 
+    //$.labelTitle.text = todoItem.name.toUpperCase();
+    //$.labelTitle.text = todoItem.get("name");
 
+        /*
     if (isDone()) {
         log.debug('[TodoDetail] : Initializing : Completed');
         $.viewDone.height = 44;
@@ -65,9 +73,9 @@ function init() {
         createGallery();
         galleryExists = true;
     }
-
+    */
     // @TODO Figure out why this is needed.  The nav widget should handle it
-    $.windowTodoDetail.open();
+    //$.windowTodoDetail.open();
 
 }
 
@@ -131,7 +139,7 @@ function done() {
  * @return CallExpression
  */
 function isDone() {
-    return todoItem.get('complete');
+    return todoItem.get('status');
 }
 
 /**

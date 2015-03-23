@@ -1,5 +1,5 @@
 <Alloy>
-    <Window id="windowTodo" class="w-fill h-fill">
+    <!--<Window id="windowTodo" class="w-fill h-fill">-->
         <!-- Add the Navigation Manager Widget -->
         <!--<Widget src="com.orthlieb.navigationgroup" id="navWin"/>-->
         <View id="viewMain" class="h-fill w-fill t-0 lo-vertical">
@@ -31,7 +31,7 @@
 
             <Widget id="form" src="nl.fokkezb.form"/>
         </View>
-    </Window>
+    <!--</Window>-->
 
 
 </Alloy>

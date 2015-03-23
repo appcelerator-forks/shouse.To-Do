@@ -85,7 +85,8 @@ function addEventListeners() {
         } else {
             // Open our ToDo List Detail controller
             var todoDetail = Alloy.createController('TodoListDetail', {itemId: e.itemId}).getView();
-            Alloy.Globals.navWindow.open(todoDetail);
+            //Alloy.Globals.navWindow.open(todoDetail);
+            Alloy.Globals.Menu.setMainContent('TodoListDetail');
         }
     });
 }

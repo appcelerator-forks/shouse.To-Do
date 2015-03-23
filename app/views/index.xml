@@ -2,6 +2,13 @@
 <Alloy>
     <Collection src="ToDo" />
     <Window class="container" height="Ti.UI.FILL" width="Ti.UI.FILL">
+        <!-- Navigation Widget -->
         <Widget src="com.orthlieb.navigationgroup" id="navWindow"/>
+
+        <!-- UI / UX Widget - Contains Left Menu, Main View, optional Right Menu, optional Bottom Menu Drawer -->
+        <!-- Alloy.Globals.Menu.setMainContent should be available now -->
+
+        <Require type="widget" src="sh.slideMenuAndNavbar" id="menu"/>
+
     </Window>
 </Alloy>

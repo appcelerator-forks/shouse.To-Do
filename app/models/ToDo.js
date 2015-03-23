@@ -3,7 +3,8 @@ exports.definition = {
 	config : {
 		"columns" : {
 			"todo_id"	            : "TEXT",
-			"content"			    : "TEXT",
+			"mane"                  : "TEXT",
+            "content"			    : "TEXT",
 			"status"			    : "BOOLEAN",
 			"createdDateTime"       : "TEXT",
 			"lastModifiedDateTime"	: "TEXT",
@@ -12,7 +13,7 @@ exports.definition = {
 			"photoCount"		    : "INTEGER"
 	    },
 		"defaults" : {
-			"complete" : false,
+			"status" : false,
 			"reminderDateTime" 	: false,
 			"hasPhoto"			: false,
 			"hasVideo"			: false,

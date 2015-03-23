@@ -56,9 +56,7 @@ exports.open = function (windowToOpen, options) {
 
              /*
              // @TODO - implement _.extend here
-             if (options.transition !== null && options.transition !== undefined) {
-             winOptions.transition = options.transitions;
-             }
+             // _.extend($, options); // This might be right
              */
 
             //containerWindow.open(winOptions);
