@@ -1,0 +1,44 @@
+<Alloy>
+    <Window id="windowTodoDetail" class="w-fill h-fill" >
+        <View id="viewMain" class="h-fill w-fill t-0 lo-vertical b-65">
+            <ScrollView id="viewRow" class="h-size w-fill t-20 lo-vertical" horizontalBounce="false">
+                <View layout="vertical" class="h-size">
+                    <Label id="labelTitle" class="w-fill h-size h4 text-center"/>
+                    <!--<Label id="labelSubtitle" width="Ti.UI.FILL" height="Ti.UI.SIZE" top="5" />-->
+                </View>
+                <View id="viewActionItems" class="w-fill h-size lo-vertical">
+                    <!--<WebView url="https://www.youtube.com/embed/puemAF7SRGA" touchEnabled="FALSE" height="Ti.UI.FILL" width="Ti.UI.FILL"></WebView>-->
+                    <!--<WebView url="https://www.youtube.com/embed?listType=search&list=obdii" touchEnabled="true" height="Ti.UI.FILL" width="Ti.UI.FILL"></WebView>-->
+                    <View id="viewDone" class="todobbutton w-fill h-45 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewCaptureDone" image="/icons/dark/ic_action_accept.png" class="w-35 h-35 l-10 t-5" />
+                        <Label>DONE!</Label>
+                    </View>
+                    <View id="viewPhoto" class="todobbutton w-fill h-45 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewCapturePhoto" image="/images/action/ic_camera_alt_black_48dp.png" class="w-35 h-35 l-10 t-5" />
+                        <Label>ADD A PHOTO</Label>
+                    </View>
+                    <View id="viewVideo" class="todobbutton w-fill h-45 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewCaptureVideo" image="/images/action/ic_camera_alt_black_48dp.png" class="w-35 h-35 l-10 t-5" />
+                        <Label>ADD A Video</Label>
+                    </View>
+                    <View id="viewAudio" class="todobbutton w-fill h-45 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewCaptureAudio" image="/images/action/ic_camera_alt_black_48dp.png" class="w-35 h-35 l-10 t-5" />
+                        <Label>ADD AUDIO</Label>
+                    </View>
+                    <View id="viewScheduleApt" class="todobbutton w-fill h-45 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewSetReminder" image="/images/action/ic_alarm_black_36dp.png" class="w-35 h-35 l-10 t-5" />
+                        <Label>SET REMINDER</Label>
+                    </View>
+                    <View id="viewAptTime" class="todobbutton w-fill h-0 r-10 l-10 t-10 borderLightGreen">
+                        <ImageView id="imageViewAptTime" image="/icons/dark/ic_action_go_to_today.png" class="w-35 h-35 l-10 t-5" />
+                        <Label id="labelReminder"></Label>
+                    </View>
+
+                    <!-- Photo Gallery -->
+                    <Require type="widget" src="com.prodz.tidynamicgrid" id="tdg" top="20" height="Ti.UI.SIZE"/>
+
+                </View>
+            </ScrollView>
+        </View>
+    </Window>
+</Alloy>

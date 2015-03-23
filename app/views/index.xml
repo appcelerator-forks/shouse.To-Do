@@ -1,0 +1,7 @@
+<!-- This is the Base MVC - the cross-platform navigation is handled via the navigationgroup widget. See other contrllers -->
+<Alloy>
+    <Collection src="ToDo" />
+    <Window class="container" height="Ti.UI.FILL" width="Ti.UI.FILL">
+        <Widget src="com.orthlieb.navigationgroup" id="navWindow"/>
+    </Window>
+</Alloy>
