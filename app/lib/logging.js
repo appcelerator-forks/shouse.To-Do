@@ -1,9 +1,8 @@
 /**
  * @class Logging
  * This class is a framework for handling logging
- * @author Sprint <mast@sprint.com>
+ * @author Steven House <steven.m.house@gmail.com>
  *
- * @link http://noodlecode.net/2013/08/object-oriented-javascript-with-commonjs-in-titanium-app/
  * @param {Object} args - this is the argument object to instantiate the class
  */
 
